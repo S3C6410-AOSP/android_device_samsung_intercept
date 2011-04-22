@@ -1,0 +1,23 @@
+## Vold 2.0 Generic fstab
+## - San Mehat (san@android.com)
+## 
+
+#######################
+## Regular device mount
+##
+## Format: dev_mount <label> <mount_point> <part> <sysfs_path1...> 
+## label        - Label for the volume
+## mount_point  - Where the volume will be mounted
+## part         - Partition # (1 based), or 'auto' for first usable partition.
+## <sysfs_path> - List of sysfs paths to source devices
+######################
+
+# externel sdcard
+{
+	mount_deep = 0
+	ums_path = /sys/devices/platform/usb_mass_storage/lun0/file
+	asec = enable
+	mbr_policy = overwrite
+}
+dev_mount sdcard /mnt/sdcard auto /devices/platform/s3c-sdhci.0/mmc_host/mmc0
+#keep this line.
