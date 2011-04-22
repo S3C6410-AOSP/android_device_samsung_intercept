@@ -12,6 +12,8 @@ KERNEL_MODULES_DIR   :=/lib/modules
 
 # Use edify for otapackage
 PRODUCT_SPECIFIC_DEFINES += TARGET_OTA_SCRIPT_MODE=amend
+PRODUCT_SPECIFIC_DEFINES += TARGET_PRELINKER_MAP=$(TOP)/device/samsung/intercept/prelink-linux-arm-intercept.map
+
 
 # Tiny toolbox
 #TINY_TOOLBOX         :=true
