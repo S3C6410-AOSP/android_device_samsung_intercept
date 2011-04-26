@@ -37,3 +37,5 @@ net.cdma.httppd.proxy.port=0
 
 dalvik.vm.startheapsize=8m
 
+net.cdma.datalinkinterface=/dev/ttyCDMA0
+net.cdma.pppd.user=user SprintNextel
